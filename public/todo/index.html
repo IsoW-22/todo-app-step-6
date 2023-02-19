@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="../stylesheets/todoApp-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <span class="close-menu" onclick="closeMenu()"> &times; </span>
+        <span id="date"></span>
+        <ul>
+          <li class="all selected-task">All Todos</li>
+          <li class="active">Active Todos</li>
+          <li class="completed">Completed Todos</li>
+        </ul>
+      </nav>
+
+      <article>
+        <div class="upper-part">
+          <span class="open-menu" onclick="openMenu()">&#9776;</span>
+          <div class="welcome-create-bundle">
+            <div class="welcome">
+              <p>welcome<br /><span class="pointer user">new user</span></p>
+            </div>
+            <div class="big-create">
+              <div class="create" id="create">
+                <button>Create new Todo</button>
+              </div>
+            </div>
+          </div>
+          <div class="server-buttons">
+            <button class="upload" onclick="upload()">Upload</button>
+            <button class="download" onclick="download()">Download</button>
+          </div>
+        </div>
+        <div class="items"></div>
+        <div class="mobile-create">
+          <div class="create" id="create" onclick="">
+            <button>Create new Todo</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <p>todos uploaded successfully</p>
+      </div>
+    </div>
+    <div class="modal2">
+      <div class="modal-content2">
+        <span class="close-modal2">&times;</span>
+        <p>todos downloaded successfully</p>
+      </div>
+    </div>
+    <script src="../functions/date.js"></script>
+    <script src="../functions/functions.js"></script>
+    <script src="../functions/menu.js"></script>
+    <script src="../functions/username.js"></script>
+    <script src="../functions/modal.js"></script>
+  </body>
+</html>
